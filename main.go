@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	timer := time.NewTicker(2 * time.Second)
+	timer := time.NewTimer(2 * time.Second)
 
 	<-timer.C
 
@@ -20,7 +20,7 @@ func main() {
 		}
 	}()
 
-	time.Sleep(2000 * time.Millisecond)
+	time.Sleep(2 * time.Second)
 	ticker.Stop()
 	fmt.Println("Ticker stopped")
 }
